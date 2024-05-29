@@ -17,6 +17,7 @@ public class MaxIntHeapTest {
         // Insert(35)
         maxHeap.insert(35);
 
+        maxHeap.print();
 
 
         // Test insert

@@ -72,39 +72,48 @@ public class LinkedList {
         current.next = newNode;
     }
 
-    public int size() {
-
+    public int size(){
         if (head == null) {
             return 0;
         }
 
-        int count = 1;
+        int size = 1;
         Node current = head;
-
         while (current.next != null) {
             current = current.next;
-            count++;
+            size++;
         }
 
-        return count;
+        return size;
     }
 
-    public void clear() {
-        head = null;
-    }
+//    public int size() {
+//
+//        if (head == null) {
+//            return 0;
+//        }
+//
+//        int count = 1;
+//        Node current = head;
+//
+//        while (current.next != null) {
+//            current = current.next;
+//            count++;
+//        }
+//
+//        return count;
+//    }
 
     public void deleteValue(int data) {
-
-        // if head
         if (head == null) {
             return;
         }
-        if (head.data == data) {
+
+        if (head.data == data){
             head = head.next;
             return;
         }
 
-        // else walk the list
         Node current = head;
 
         while (current.next != null) {
@@ -115,6 +124,33 @@ public class LinkedList {
             current = current.next;
         }
     }
+
+    public void clear() {
+        head = null;
+    }
+
+//    public void deleteValue(int data) {
+//
+//        // if head
+//        if (head == null) {
+//            return;
+//        }
+//        if (head.data == data) {
+//            head = head.next;
+//            return;
+//        }
+//
+//        // else walk the list
+//        Node current = head;
+//
+//        while (current.next != null) {
+//            if (current.next.data == data) {
+//                current.next = current.next.next;
+//                return;
+//            }
+//            current = current.next;
+//        }
+//    }
 
     public void print() {
         Node current = head;
